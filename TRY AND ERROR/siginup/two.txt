@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    .room-card {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .reservation-form {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 12px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hotel Management System</h1>
+  </header>
+
+  <section>
+    <h2>Available Rooms</h2>
+    <div class="room-card">
+      <h3>Room 101</h3>
+      <p>Type: Single</p>
+      <p>Price: $100 per night</p>
+      <button onclick="reserveRoom(101)">Reserve Now</button>
+    </div>
+
+    <div class="room-card">
+      <h3>Room 201</h3>
+      <p>Type: Double</p>
+      <p>Price: $150 per night</p>
+      <button onclick="reserveRoom(201)">Reserve Now</button>
+    </div>
+    <!-- Additional room cards can be added as needed -->
+  </section>
+
+  <section>
+    <h2>Booking Information</h2>
+    <p>No current bookings</p>
+  </section>
+
+  <section>
+    <h2>Reservation Form</h2>
+    <div class="reservation-form">
+      <form id="reservationForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="roomType">Room Type:</label>
+        <select id="roomType" name="roomType" required>
+          <option value="single">Single</option>
+          <option value="double">Double</option>
+          <!-- Additional room types can be added as needed -->
+        </select>
+
+        <button type="button" onclick="submitReservation()">Submit Reservation</button>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    function reserveRoom(roomNumber) {
+      alert('Room ' + roomNumber + ' reserved!');
+      // You can add additional logic here, such as updating the database.
+    }
+
+    function submitReservation() {
+      var form = document.getElementById('reservationForm');
+      // You can add logic here to handle the form submission, e.g., sending data to a server.
+      alert('Reservation submitted!');
+    }
+  </script>
+
+</body>
+</html>

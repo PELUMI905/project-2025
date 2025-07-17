@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Enrahlis</title>
+    <link rel="stylesheet" href="style.css">
+    <!--font awesome 6.0-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!--header section start-->
+    <header>
+        <a href="#" class="logo"><img src="./img/Enrahlis_logo2-removebg-preview.png" width="150"></a>
+        <ul style="list-style: none;">
+            <li><span class="top">Enrahlis Technology And Solution</span><br><span class="base">Bringing Your Ideas To
+                    Reality</span></li>
+        </ul>
+    
+        <nav class="navbar">
+            <a href="homepage.html" class="active">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="product.html">Product</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-bars" id="menu"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </header>
+    
+    <script type="text/javascript">
+        let menu = document.querySelector("#menu");
+        let navbar = document.querySelector(".navbar");
+
+        menu.onclick = () => {
+            menu.classList.toggle("fa-times");
+            navbar.classList.toggle("active");
+        };
+    </script>
+    <!--header section ends-->
+<div class="contact_us">
+    <div class="contact-card">
+        <i class="fa-solid fa-location-dot"></i>
+        <br>
+        <h2>OUR MAIN OFFICE</h2>
+        <br>
+        <p>34 Brooklyn Street, London</p>
+    </div>
+
+    <div class="contact-card">
+        <i class="fa-sharp fa-solid fa-phone"></i>
+        <br>
+        <h2>PHONE NUMBER</h2>
+        <br>
+        <p>+2349015624709</p>
+    </div>
+
+    <div class="contact-card">
+        <i class="fa-solid fa-fax"></i>
+        <br>
+        <h2>FAX</h2>
+        <br>
+        <p>1-234-567-8900</p>
+    </div>
+
+    <div class="contact-card">
+        <i class="fa-solid fa-envelope"></i>
+        <br>
+        <h2>Email</h2>
+        <br>
+        <p>contactus@enrahlis.com</p>
+    </div>
+</div>
+
+<div class="contact-form">
+        <form>
+            <h3>CONTACT US</h3>
+            <input type="text" placeholder="Full Name" id="name" required>
+            <input type="email" placeholder="Enter a valid email address" id="email" required>
+            <input type="text" placeholder="Fill in your phone number" id="phone" required>
+            <textarea id="message" rows="4" placeholder="How Can We Help You?"></textarea>
+            <button type="submit">Send</button>
+        </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Enrahlis</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--font awesome 6.0-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!--header section start-->
+    <header>
+        <a href="#" class="logo"><img src="./img/Enrahlis_logo2-removebg-preview.png" width="150"></a>
+        <ul style="list-style: none;">
+            <li><span class="top">Enrahlis Technology And Solution</span><br><span class="base">Bringing Your Ideas To Reality</span></li>
+        </ul>
+    
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="product.html">Product</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    
+        <div class="icons">
+            <i class="fas fa-bars" id="menu"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </header>
+
+    <script type="text/javascript">
+        let menu = document.querySelector("#menu");
+        let navbar = document.querySelector(".navbar");
+
+        menu.onclick = () => {
+            menu.classList.toggle("fa-times");
+            navbar.classList.toggle("active");
+        };
+    </script>
+    <!--header section ends-->
+    
+    <script>
+        var i = 0; //start point
+        var images = [];
+        var time = 5000;
+
+        //Image List
+        images[0] = './Images/image-1.jpg';
+        images[1] = './Images/image-2.jpg';
+        images[2] = './Images/image-3.jpg';
+        images[3] = './Images/image-4b.jpg';
+        images[4] = './Images/image-5.jpeg';
+        images[5] = './Images/image-6.png';
+
+        //Change Image
+        function changeImg() {
+            document.slide.src = images[i];
+
+            if(i < images.length - 1){
+                i++;
+            } else {
+                i = 0;
+            }
+
+            setTimeout("changeImg()", time);
+        }
+        
+        window.onload = changeImg;
+    </script>
+    <img name="slide" width="100%" height="700">
+
+<div class="about-us-body">
+    <h2>ABOUT US</h2>
+    <div class="about-us">
+        <div class="about-text">
+        
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid tempore maiores dolore quam. Sint
+                nisi voluptatum officia excepturi a debitis aut nesciunt, suscipit odit labore ullam eveniet! Atque facilis
+                possimus, modi quaerat deleniti quas nisi repellat, recusandae dolorem sed harum perferendis, eveniet doloribus
+                    a numquam unde! Aliquid, esse! Assumenda.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium aliquid tempore maiores dolore quam. Sint
+                nisi
+                voluptatum officia excepturi a debitis aut nesciunt, suscipit odit labore ullam eveniet! Atque facilis possimus,
+                modi quaerat deleniti quas nisi repellat, recusandae dolorem sed harum perferendis, eveniet doloribus a numquam.
+            </p>
+        </div>
+        <div class="video">
+            <video width="500px" controls>
+                <source src="./video/ENRAHLIS VIDEO.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+</div>
+        
+
+    <div class="ourServices">
+        <div class="software">
+                <h1>Software Design And Development</h1>
+            <h6>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero vitae quo laudantium perspiciatis eveniet praesentium, doloribus neque rerum? Doloremque nihil ad possimus culpa maiores et sit vero hic atque, debitis saepe odio excepturi optio harum minima corrupti velit, nisi iste provident natus! Facilis magnam labore vero cumque obcaecati at ullam?
+            </h6>
+        </div>
+
+        <div class="software">
+            <h1>Web Design And Development</h1>
+            <h6>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi provident consectetur, voluptate expedita sunt quae ut fugit? Earum esse maiores doloribus ipsam eaque reiciendis numquam dolorem dolore deserunt optio saepe beatae hic laudantium pariatur veniam minima quia aut cum quidem suscipit repellendus fugit, at asperiores ducimus. Eos consectetur earum quia.
+            </h6>
+        </div>
+
+        <div class="software">
+            <h1>Mobile App Development</h1>
+            <h6>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa fugit sint natus! Eaque dolor velit, in dicta optio temporibus quo quaerat atque consequatur rem perferendis repellat reiciendis ab! Natus delectus at eum neque! Maiores ipsam dolores sint obcaecati nemo enim suscipit quibusdam? Dolor, est id amet ut dolore hic ipsum.
+            </h6>
+        </div>
+
+        <div class="software">
+            <h1>Graphic Designing</h1>
+            <h6>
+                Let's make your brand colorful!
+                We design professional business logos,
+                flyers, cards, brochures, e.t.c.
+            </h6>
+            
+        </div>
+    </div>
+<div class="container" id="contact">
+    <form>
+        <h3>GET IN TOUCH</h3>
+        <input type="text" placeholder="Your Name" id="name" required>
+        <input type="email" placeholder="Email Id" id="email" required>
+        <input type="text" placeholder="Phone No." id="phone" required>
+        <textarea id="message" rows="4" placeholder="How Can We Help You?"></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+<!--Location-->
+<div class="ourLocation">
+    <h2>Our Head Office</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.73031249517!2d3.445974050274041!3d6.802626895059107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bc0c2930ba82d%3A0xc1d5c1f1c504674e!2sRedemption%20City%20Old%20Auditorium%20Loburo!5e0!3m2!1sen!2sng!4v1679600539497!5m2!1sen!2sng"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+</body>
+</html>

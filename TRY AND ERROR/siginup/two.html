@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Management System</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+    }
+
+    nav {
+      background-color: #444;
+      color: #fff;
+      padding: 1em;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Additional styling for specific pages */
+    .reservation-form,
+    .room-management {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .reservation-form form,
+    .room-management table {
+      width: 100%;
+    }
+
+    /* Add more styling as needed */
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Hotel Management System</h1>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a> |
+    <a href="#reservation">Reservation</a> |
+    <a href="#rooms">Room Management</a>
+    <!-- Add more navigation links as needed -->
+  </nav>
+
+  <main id="home">
+    <h2>Welcome to Our Hotel</h2>
+    <!-- Add homepage content here -->
+  </main>
+
+  <main class="reservation-form" id="reservation">
+    <h2>Reservation Form</h2>
+    <form>
+      <!-- Add reservation form fields here -->
+      <label for="checkinDate">Check-in Date:</label>
+      <input type="date" id="checkinDate" name="checkinDate" required>
+      <!-- Add more form fields as needed -->
+      <button type="submit">Submit Reservation</button>
+    </form>
+  </main>
+
+  <main class="room-management" id="rooms">
+    <h2>Room Management</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Room Number</th>
+          <th>Room Type</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>Single</td>
+          <td>Available</td>
+        </tr>
+        <!-- Add more room entries as needed -->
+      </tbody>
+    </table>
+  </main>
+
+  <footer>
+    &copy; 2023 Hotel Management System
+  </footer>
+</body>
+</html>
